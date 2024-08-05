@@ -2,24 +2,24 @@ export interface ISession {
     session_length: number
 }
 
-export enum sessionActionTypes {
+export enum SessionActionTypes {
     INCREMENT_SESSION = "INCREMENT_SESSION",
     DECREMENT_SESSION = "DECREMENT_SESSION",
     RESET_SESSION = "RESET_SESSION"
 }
 
 export interface IIncrementSessionAction {
-    type: sessionActionTypes.INCREMENT_SESSION
+    type: SessionActionTypes.INCREMENT_SESSION
 }
 
 export interface IDecrementSessionAction {
-    type: sessionActionTypes.DECREMENT_SESSION
+    type: SessionActionTypes.DECREMENT_SESSION
 }
 
 export interface IResetSessionAction {
-    type: sessionActionTypes.RESET_SESSION
+    type: SessionActionTypes.RESET_SESSION
 }
 
-export type sessionAction = IIncrementSessionAction
+export type SessionAction = IIncrementSessionAction
     | IDecrementSessionAction
     | IResetSessionAction

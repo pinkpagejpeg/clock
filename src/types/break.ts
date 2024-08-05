@@ -2,24 +2,24 @@ export interface IBreak {
     break_length: number
 }
 
-export enum breakActionTypes {
+export enum BreakActionTypes {
     INCREMENT_BREAK = "INCREMENT_BREAK",
     DECREMENT_BREAK = "DECREMENT_BREAK",
     RESET_BREAK = "RESET_BREAK"
 }
 
 export interface IIncrementBreakAction {
-    type: breakActionTypes.INCREMENT_BREAK
+    type: BreakActionTypes.INCREMENT_BREAK
 }
 
 export interface IDecrementBreakAction {
-    type: breakActionTypes.DECREMENT_BREAK
+    type: BreakActionTypes.DECREMENT_BREAK
 }
 
 export interface IResetBreakAction {
-    type: breakActionTypes.RESET_BREAK
+    type: BreakActionTypes.RESET_BREAK
 }
 
-export type breakAction = IIncrementBreakAction
+export type BreakAction = IIncrementBreakAction
     | IDecrementBreakAction
     | IResetBreakAction

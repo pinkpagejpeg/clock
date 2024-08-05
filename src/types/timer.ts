@@ -4,7 +4,7 @@ export interface ITimer {
     isRunning: boolean,
 }
 
-export enum timerActionTypes {
+export enum TimerActionTypes {
     START_TIMER = "START_TIMER",
     STOP_TIMER = "STOP_TIMER",
     RESET_TIMER = "RESET_TIMER",
@@ -13,26 +13,26 @@ export enum timerActionTypes {
 }
 
 export interface IStartTimerAction {
-    type: timerActionTypes.START_TIMER,
+    type: TimerActionTypes.START_TIMER,
 }
 
 export interface IStopTimerAction {
-    type: timerActionTypes.STOP_TIMER,
+    type: TimerActionTypes.STOP_TIMER,
 }
 
 export interface IResetTimerAction {
-    type: timerActionTypes.RESET_TIMER,
+    type: TimerActionTypes.RESET_TIMER,
 }
 
 export interface ISwitchModeTimerAction {
-    type: timerActionTypes.SWITCH_MODE_TIMER,
+    type: TimerActionTypes.SWITCH_MODE_TIMER,
 }
 
 export interface ICountTimerAction {
-    type: timerActionTypes.COUNT_TIMER,
+    type: TimerActionTypes.COUNT_TIMER,
 }
 
-export type timerAction = IStartTimerAction
+export type TimerAction = IStartTimerAction
     | IStopTimerAction
     | IResetTimerAction
     | ISwitchModeTimerAction
