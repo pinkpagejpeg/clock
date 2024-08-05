@@ -9,7 +9,8 @@ export enum TimerActionTypes {
     STOP_TIMER = "STOP_TIMER",
     RESET_TIMER = "RESET_TIMER",
     SWITCH_MODE_TIMER = "SWITCH_MODE_TIMER",
-    COUNT_TIMER = "COUNT_TIMER"
+    COUNT_TIMER = "COUNT_TIMER",
+    SET_TIME_LEFT_TIMER = "SET_TIME_LEFT_TIMER"
 }
 
 export interface IStartTimerAction {
@@ -32,10 +33,16 @@ export interface ICountTimerAction {
     type: TimerActionTypes.COUNT_TIMER,
 }
 
+export interface ISetTimeLeftTimer {
+    type: TimerActionTypes.SET_TIME_LEFT_TIMER,
+    payload: number
+}
+
 export type TimerAction = IStartTimerAction
     | IStopTimerAction
     | IResetTimerAction
     | ISwitchModeTimerAction
     | ICountTimerAction
+    | ISetTimeLeftTimer
 
 

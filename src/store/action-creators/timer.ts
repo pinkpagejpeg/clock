@@ -40,3 +40,12 @@ export const countTimer = () => {
         })
     }
 }
+
+export const setTimeLeftTimer = (time: number) => {
+    return (dispatch: Dispatch<TimerAction>) => {
+        dispatch({
+            type: TimerActionTypes.SET_TIME_LEFT_TIMER,
+            payload: time
+        })
+    }
+}
